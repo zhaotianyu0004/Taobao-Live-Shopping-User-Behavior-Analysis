@@ -22,14 +22,16 @@
 - Matplotlib / Seaborn
 - MySQL（数据清洗辅助）
 
-
 ## 分析框架
-
-1. 数据清洗与预处理
-2. 模块一：直播时段识别与冲动消费分析
-3. 模块二：转化漏斗对比（直播 vs 非直播时段）
-4. 模块三：RFM用户分层与聚类
-5. 业务建议
+数据清洗与预处理
+↓
+模块一：直播时段识别与冲动消费分析
+↓
+模块二：转化漏斗对比（直播 vs 非直播时段）
+↓
+模块三：RFM用户分层与聚类
+↓
+业务建议
 
 ---
 
@@ -118,39 +120,39 @@
 ---
 
 ## 目录结构
-
-| 路径 | 说明 |
-|---|---|
-| `data/userbehavior_sample.csv` | 抽样后的数据文件 |
-| `notebooks/01_data_cleaning.ipynb` | 数据清洗与预处理 |
-| `notebooks/02_livestream_time_analysis.ipynb` | 直播时段识别与冲动消费分析 |
-| `notebooks/03_conversion_funnel.ipynb` | 转化漏斗对比分析 |
-| `notebooks/04_user_segmentation.ipynb` | RFM用户分层与聚类 |
-| `output/charts/` | 所有输出图表 |
+taobao-liveshopping-behavior-analysis/
+│
+├── data/
+│   └── userbehavior_sample.csv
+│
+├── notebooks/
+│   ├── 01_data_cleaning.ipynb
+│   ├── 02_livestream_time_analysis.ipynb
+│   ├── 03_conversion_funnel.ipynb
+│   └── 04_user_segmentation.ipynb
+│
+├── output/
+│   └── charts/
+│       ├── hourly_behavior.png
+│       ├── pv_vs_buy_hourly.png
+│       ├── user_type_compare.png
+│       ├── funnel_comparison.png
+│       ├── funnel_by_usertype.png
+│       └── elbow.png
+│
+└── README.md
 
 ## 结论总览
 直播时段带来大量流量涌入
-
 ↓
-
 纯浏览型用户占比34.7%，显著高于非直播时段
-
 ↓
-
 导致整体转化率被稀释（直播26.3% vs 非直播57.3%）
-
 ↓
-
 但进入购买决策的用户中，冲动购买率更高（51.8% vs 47.1%）
-
 ↓
-
 种草未购用户中58.6%在后续时段完成了购买（滞后转化）
-
 ↓
-
 结论：直播核心价值是"冲动转化+种草蓄水"
-
 单一即时转化率严重低估直播真实效果
-
 针对41.4%彻底流失用户应按RFM分层差异化触达
